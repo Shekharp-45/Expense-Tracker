@@ -15,6 +15,7 @@
     padding: 4px;
     border-radius: 6px;
     background-color: white;
+    
   }
   .form-item label {
     background-color: lightgrey;
@@ -111,4 +112,5 @@
         right:12%;
     }
   }
+  
   

@@ -1,29 +1,27 @@
-.header-container{
+.header-container {
     width: 50%;
-     margin: auto;
-}
-.header{
+    margin: auto;
+  }
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex: 1;
-    max-width: 6px 12px;
-}
-
-.header-logo{
+    margin: 6px 12px;
+  }
+  .header-logo {
     display: flex;
     align-items: center;
     font-size: 32px;
     font-weight: 500;
-}
-
-.header-logo i{
+  }
+  .header-logo i {
     display: flex;
     align-items: center;
     margin-left: 6px;
-}
-
-.header-button{
+  }
+  
+  .header-button {
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -31,35 +29,32 @@
     border: 1px solid black;
     border-radius: 6px;
     padding: 0px 8px;
-}
-.header-button i{
+  }
+  .header-button i {
     margin-right: 4px;
-}
-@media only screen and (max-width:1024px)
-{
-    /* it will create responsive website */
-    .header-container{
-        width: 90%;
-
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .header-container {
+      width: 90%;
     }
-    .header-logo{
-        font-size: 28px;
+    .header-logo {
+      font-size: 28px;
     }
-    .header-button{
-        font-size: 18px;
+    .header-button {
+      font-size: 18px;
     }
-}
-@media only screen and (max-width:512px)
-{
-    /* it will create responsive website */
-    .header-container{
-        width: 100%;
-
+  }
+  
+  @media only screen and (max-width: 512px) {
+    .header-container {
+      width: 100%;
     }
-    .header-logo{
-        font-size: 24px;
+    .header-logo {
+      font-size: 24px;
     }
-    .header-button{
-        font-size: 16px;
+    .header-button {
+      font-size: 16px;
     }
-}
+  }
+  
