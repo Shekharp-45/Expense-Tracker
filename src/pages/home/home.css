@@ -1,16 +1,24 @@
-.home{
+.home {
     width: 50%;
     margin: auto;
 }
-@media only screen and (max-width:1024px)
-{
-    .home{
-        width: 90px;
+
+@media only screen and (max-width: 1024px) {
+    .home {
+        width: 90%;
+        max-width: 600px; /* Example max-width for tablet screens */
     }
 }
-@media only screen and (max-width:512px)
-{
-    .home{
-        width: 100px;
+
+@media only screen and (max-width: 768px) {
+    .home {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    .home {
+        width: 90%;
+        max-width: 300px; /* Example max-width for smaller mobile screens */
     }
 }

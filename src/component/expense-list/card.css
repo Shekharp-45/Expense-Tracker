@@ -1,63 +1,201 @@
 .card {
-    background: white;
-    padding: 12px;
-    margin: 2px 0px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .card-image {
-    height: 40px;
-  }
-  .card-right {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  .card-info {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 12px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card-image-container {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.card-time {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.card-amount {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: #e74c3c;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+/* Media Queries for Mobile Devices */
+
+/* Extra Small Devices (phones, less than 320px) */
+@media only screen and (max-width: 320px) {
+  .card {
     flex-direction: column;
-    flex: 1;
-    margin-left: 12px;
+    align-items: flex-start;
+    padding: 16px;
   }
+
+  .card-image-container {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .card-info {
+    align-items: flex-start;
+  }
+
   .card-title {
-    font-size: 20px;
-  }
-  .card-time {
-    font-size: 12px;
-    color: gray;
-  }
-  .card-amount {
-    font-size: 20px;
-    font-weight: 500;
-  }
-  .delete-icon {
     font-size: 16px;
   }
-  
-  @media only screen and (max-width: 1024px) {
-    .card-title {
-      font-size: 18px;
-    }
-    .card-amount {
-      font-size: 18px;
-    }
-    .card-image {
-      height: 32px;
-    }
-    .card-time {
-      font-size: 10px;
-    }
+
+  .card-time {
+    font-size: 12px;
   }
-  
-  @media only screen and (max-width: 512px) {
-    .card-title {
-      font-size: 16px;
-    }
-    .card-amount {
-      font-size: 16px;
-    }
+
+  .card-right {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
   }
+
+  .card-amount {
+    font-size: 14px;
+  }
+
+  .delete-icon {
+    font-size: 18px;
+  }
+}
+
+/* Small Devices (portrait tablets and large phones, 320px and up) */
+@media only screen and (min-width: 320px) and (max-width: 767.98px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .card-image-container {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  .card-info {
+    align-items: flex-start;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-time {
+    font-size: 12px;
+  }
+
+  .card-right {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+
+  .card-amount {
+    font-size: 14px;
+  }
+
+  .delete-icon {
+    font-size: 18px;
+  }
+}
+
+/* Medium Devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .card {
+    padding: 14px;
+  }
+
+  .card-title {
+    font-size: 17px;
+  }
+
+  .card-time {
+    font-size: 13px;
+  }
+
+  .card-amount {
+    font-size: 15px;
+  }
+
+  .delete-icon {
+    font-size: 19px;
+  }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-time {
+    font-size: 14px;
+  }
+
+  .card-amount {
+    font-size: 16px;
+  }
+
+  .delete-icon {
+    font-size: 20px;
+  }
+}

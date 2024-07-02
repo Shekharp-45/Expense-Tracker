@@ -1,82 +1,172 @@
+
 .topfold {
-    display: flex;
-    justify-content: space-between;
-    margin: 6px 12px;
-    padding: 12px 0px;
-    align-items: center;
-  }
-  .home-topfold {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 12px;
+  padding: 12px 0px;
+  align-items: center;
+}
+.home-topfold {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.searchbar {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  background-color: white;
+  border-radius: 20px; /* Adjust the border-radius for more or less curve */
+  overflow: hidden; /* Ensures content inside doesn't overflow rounded corners */
+}
+
+.searchbar input {
+  width: 80%;
+  outline: none;
+  padding: 8px 12px; /* Adjust padding as needed */
+  border: none;
+  background-color: transparent; /* Make input background transparent */
+}
+
+.searchbar i {
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  border: 1px solid white;
+  font-size: 20px;
+  padding: 0px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.add-button i {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+
+.add-topfold {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  flex: 1;
+}
+
+.add-topfold-button {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.add-topfold-button i {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+
+.expense-list {
+  margin: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.empty-image {
+  height: 360px;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 1024px) {
+  .add-button {
+    font-size: 18px;
   }
   .searchbar {
-    display: flex;
-    align-items: center;
-    width: 50%;
-    background-color: white;
-    border-radius: 12px;
+    width: 70%;
+  }
+  .empty-image {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .topfold {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .home-topfold, .add-topfold {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .searchbar {
+    width: 100%;
+    margin-bottom: 12px;
   }
   .searchbar input {
-    width: 80%;
-    outline: none;
-    padding: 8px 0px;
-    border: none;
-    margin-left: 6px;
-    background-color: white;
+    width: 90%;
+    margin-left: 0;
+    padding: 8px;
   }
-  
-  .searchbar i {
-    display: flex;
-    align-items: center;
-    margin-left: 6px;
-  }
-  
   .add-button {
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid white;
-    font-size: 20px;
-    padding: 0px 8px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  .add-button i {
-    display: flex;
-    align-items: center;
-    margin-right: 4px;
-  }
-  .add-topfold {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
+    font-size: 16px;
+    padding: 4px 8px;
+    margin-top: 12px;
   }
   .add-topfold-button {
+    font-size: 16px;
+    padding: 4px 0;
+    margin-top: 12px;
+  }
+  .empty-image {
+    height: 240px;
+  }
+  .expense-list {
+    margin: 6px 4px; /* Further reduce margins for small screens */
+    padding: 12px; /* Add padding for better spacing on mobile */
+  }
+  .expense-item {
     display: flex;
-    align-items: center;
-    font-size: 18px;
-    cursor: pointer;
+    flex-direction: column; /* Stack expense item details vertically */
+    align-items: flex-start; /* Align items to the start for better readability */
+    margin-bottom: 12px; /* Add margin between expense items */
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  .add-topfold-button i {
-    display: flex;
-    align-items: center;
-    margin-right: 4px;
+  .expense-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
   }
-  
-  @media only screen and (max-width: 1024px) {
-    .add-button {
-      font-size: 18px;
-    }
-    .searchbar {
-      width: 70%;
-    }
+  .expense-item-details {
+    width: 100%;
   }
-  
-  @media only screen and (max-width: 512px) {
-    .add-button {
-      font-size: 16px;
-    }
+  .expense-item-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
   }
-  
+  .expense-item-amount {
+    font-size: 14px;
+    color: #666;
+  }
+  .expense-item-date {
+    font-size: 12px;
+    color: #999;
+    margin-top: 6px;
+  }
+}
+
